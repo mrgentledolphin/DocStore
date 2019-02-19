@@ -108,6 +108,7 @@ express()
                     files[i].down = `/download/${files[i].filename}`
                 }
                 if (added) {
+                    files[i].ext = getFileExtension(files[i].filename)
                     toShow.push(files[i])
                 }
                 added = false
@@ -182,3 +183,7 @@ express()
     })
 
     .listen(port || 3000)
+
+function getFileExtension(filename) {
+    return (/[.]/.exec(filename)) ? /[^.]+$/.exec(filename)[0] : undefined;
+}

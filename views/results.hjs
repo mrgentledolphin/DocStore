@@ -18,7 +18,7 @@
         <h1 class="center-align">DocStore</h1>
         <ul class="collection">
         {{#files}}
-            <li class="collection-item"><b>Nome: </b> {{nome}} - <b>Tags: </b> {{#tags}}{{.}}, {{/tags}}
+            <li class="collection-item"><b>Nome: </b> {{nome}}.{{ext}} - <b>Tags: </b> {{#tags}}{{.}}, {{/tags}}
                     
                 <a href="{{down}}" class="secondary-content"><i class="material-icons">arrow_downward</i></a></li>
         {{/files}}
