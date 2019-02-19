@@ -7,7 +7,7 @@ const GridFsStorage = require('multer-gridfs-storage')
 const Grid = require('gridfs-stream')
 const methodOverride = require('method-override')
 
-const port = 80
+const port = process.env.PORT || 3000
 
 /* mongodb */
 const mongoose = require('mongoose')
