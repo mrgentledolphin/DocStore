@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DocStore</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="center-align">DocStore</h1>
+        <h3>Uplaod file</h3>
+        
+        <form action="/uplaod" method="POST" enctype="multipart/form-data">
+            <div class="input-field">
+                <label for="inputName">Insert name...</label>
+                <input type="text" name="name" id="inputName">
+            </div>
+            <div class="input-field">
+                <label for="inputTags">Insert tags...</label>
+                <input type="text" name="tags" id="inputTags">
+            </div>
+            <div class="file-field input-field">
+                <div class="btn green">
+                    <span>File</span>
+                    <input type="file" name="file">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+            <input type="submit" class="btn green" value="Upload File">
+        </form>
+
+        <h3>Search file</h3>
+        <form action="/search" method="POST">
+            <div class="input-field">
+                <label for="name">Search by name...</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="input-field">
+                <label for="tags">Search by tags...</label>
+                <input type="text" name="tags" id="tags">
+            </div>
+            <input type="submit" value="Search" class="btn green">
+        </form>
+    </div>
+</body>
+</html>
